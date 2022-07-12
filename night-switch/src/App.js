@@ -14,6 +14,7 @@ class App extends Component {
 
   switchOnOrOff(){
     //console.log(this);
+    // change state
     (this.state.switchState)?this.setState({switchState:false}):this.setState({switchState:true});
   }
 
