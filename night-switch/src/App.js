@@ -1,30 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Header from './components/Header/Header';
+import { SwitchStateProvider } from './context/SwitchStateContext';
 import './App.css';
 
-class App extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      switchState: false
-    };
-    this.switchOnOrOff = this.switchOnOrOff.bind(this);
-  }
-
-  switchOnOrOff(){
-    //console.log(this);
-    (this.state.switchState)?this.setState({switchState:false}):this.setState({switchState:true});
-  }
-
-  render(){
+const App = () => {
     return (
     <div className="App">
-      <Header clickFunc = {this.switchOnOrOff} switchState = {this.state.switchState} />
+      <SwitchStateProvider>
+        <Header />
+      </SwitchStateProvider>
+      
     </div>
   );
-  }
-  
 }
 
 export default App;

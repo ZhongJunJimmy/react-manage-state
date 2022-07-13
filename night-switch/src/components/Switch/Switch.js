@@ -1,11 +1,13 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { SwitchStateContext } from '../../context/SwitchStateContext';
 import switchOnImg from '../../images/switch-on.png'
 import switchOffImg from '../../images/switch-off.png'
 import '../../App.css';
 
-const Switch = (props) => {
+function Switch(){
+    const {switchState, toggleSwitchState} = useContext(SwitchStateContext);
     return(
-        <img className='Lightswitch' onClick={props.clickFunc} src={(props.switchState)?switchOnImg:switchOffImg}/>
+        <img className='Lightswitch' onClick={toggleSwitchState} src={(switchState)?switchOnImg:switchOffImg}/>
     );
 }
 

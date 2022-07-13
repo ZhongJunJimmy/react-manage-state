@@ -1,13 +1,15 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { SwitchStateContext } from '../../context/SwitchStateContext';
 import '../../App.css';
 import Switch from '../Switch/Switch';
 
-const Header = (props) => {
+function Header(){
+    const {switchState, toggleSwitchState} = useContext(SwitchStateContext);
     return(
-        <header className={(props.switchState)?"App-header-light":"App-header-dark"}>
-            <Switch clickFunc = {props.clickFunc} switchState = {props.switchState}/>
+        <header className={switchState?"App-header-light":"App-header-dark"}>
+            <Switch />
         </header>
-    );
+    );  
 }
 
 export default Header;
