@@ -8,7 +8,7 @@ function App(){
 
   const switchOnOrOff = () => {
     //console.log(this);
-    (switchState)?setSwitchState(0):setSwitchState(1);
+    setSwitchState(!switchState);
   }
 
   return (
