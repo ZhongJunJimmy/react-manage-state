@@ -1,1 +1,1 @@
-# react_context_vs_redux
+# Managing state by Redux
