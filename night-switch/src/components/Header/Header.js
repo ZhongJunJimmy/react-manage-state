@@ -1,11 +1,14 @@
 import React from 'react';
 import '../../App.css';
 import Switch from '../Switch/Switch';
+import { useSelector } from 'react-redux';
+
 
 const Header = (props) => {
+    const switchState = useSelector(state => state.switchState);
     return(
-        <header className={(props.switchState)?"App-header-light":"App-header-dark"}>
-            <Switch clickFunc = {props.clickFunc} switchState = {props.switchState}/>
+        <header className={switchState?"App-header-light":"App-header-dark"}>
+            <Switch/>
         </header>
     );
 }
