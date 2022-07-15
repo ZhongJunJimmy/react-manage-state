@@ -3,17 +3,19 @@ import Header from './components/Header/Header';
 import './App.css';
 
 
-function App(){
+function App() {
   const [switchState, setSwitchState] = useState(0);
 
   const switchOnOrOff = () => {
     //console.log(this);
-    setSwitchState(!switchState);
+    setSwitchState((prevn) => {
+      return !prevn;
+    })
   }
 
   return (
     <div className="App">
-      <Header clickFunc = {switchOnOrOff} switchState = {switchState} />
+      <Header clickFunc={ switchOnOrOff } switchState={ switchState } />
     </div>
   );
 }
