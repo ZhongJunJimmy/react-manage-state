@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header clickFunc={ switchOnOrOff } switchState={ switchState } />
+      <Header switchOnOrOff={ switchOnOrOff } switchState={ switchState } />
     </div>
   );
 }

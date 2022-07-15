@@ -2,10 +2,10 @@ import React from 'react';
 import '../../App.css';
 import Switch from '../Switch/Switch';
 
-const Header = (props) => {
-    return(
-        <header className={(props.switchState)?"App-header-light":"App-header-dark"}>
-            <Switch clickFunc = {props.clickFunc} switchState = {props.switchState}/>
+const Header = ({ switchOnOrOff, switchState }) => {
+    return (
+        <header className={ (switchState) ? "App-header-light" : "App-header-dark" }>
+            <Switch switchOnOrOff={ switchOnOrOff } switchState={ switchState } />
         </header>
     );
 }

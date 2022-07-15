@@ -3,9 +3,9 @@ import switchOnImg from '../../images/switch-on.png'
 import switchOffImg from '../../images/switch-off.png'
 import '../../App.css';
 
-const Switch = (props) => {
-    return(
-        <img className='Lightswitch' onClick={props.clickFunc} src={(props.switchState)?switchOnImg:switchOffImg}/>
+const Switch = ({ switchOnOrOff, switchState }) => {
+    return (
+        <img className='Lightswitch' onClick={ switchOnOrOff } src={ switchState ? switchOnImg : switchOffImg } />
     );
 }
 
