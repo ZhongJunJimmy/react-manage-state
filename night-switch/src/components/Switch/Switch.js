@@ -1,11 +1,9 @@
 import React from 'react';
-import switchOnImg from '../../images/switch-on.png'
-import switchOffImg from '../../images/switch-off.png'
 import '../../App.css';
 
-const Switch = ({ switchOnOrOff, switchState }) => {
+const Switch = ({ switchOnOrOff }) => {
     return (
-        <img className='Lightswitch' onClick={ switchOnOrOff } src={ switchState ? switchOnImg : switchOffImg } />
+        <img id="light-switch" onClick={ switchOnOrOff } className='Lightswitch' alt="switch" />
     );
 }
 
