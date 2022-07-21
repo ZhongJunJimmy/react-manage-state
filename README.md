@@ -1,7 +1,7 @@
 # React State Manage
 You can review difference methods to manage state in react by checkout others branch.
 
-
+### How to use it
 - Clone thie repository bt following command
   
   `> git clone git@github.com:ZhongJunJimmy/react-manage-state.git`
