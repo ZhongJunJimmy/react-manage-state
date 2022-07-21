@@ -29,7 +29,9 @@ Don’t call Hooks from regular JavaScript functions.
 1. Solved Props drilling issue without third Party Packages
 
 ### Redux Sample
-Action: An object describing "what happened"  
-Reducer - a function that takes a current state value and an action object, and returns a new state value.  
-<to be continue...>
+Action -> Reducer -> Store -> UI  
+1. Action: An object describing "what happened"  
+2. Reducer - a function that takes a current state value and an action object, and returns a new state value.  
+
+**To be continue...**
 
