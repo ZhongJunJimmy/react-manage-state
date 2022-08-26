@@ -5,7 +5,8 @@ const initState = {
 const switchStateReducer = (state = initState, action) => {
   switch (action.type) {
     case 'toggleSwitchState':
-        return Object.assign({}, state, {
+      console.log("TA");
+      return Object.assign({}, state, {
         switchState: !(state.switchState)
       })
     default:
